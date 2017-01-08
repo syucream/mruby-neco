@@ -1,5 +1,5 @@
 module Neco
-  class Org
+  class KvsOrg
     include Enumerable
  
     def initialize

@@ -1,4 +1,4 @@
-org = Neco::Org.new
+org = Neco::KvsOrg.new
 
 org.add_member(:etcd, {:url => 'http://127.0.0.1:2379/v2'})
 org.add_member(:lmdb, {:path => '/tmp/tmp.lmdb', :options => {:flags => MDB::NOSUBDIR}})
