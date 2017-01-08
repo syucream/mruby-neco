@@ -116,18 +116,18 @@ module Neco
 
       case klass.open_type
       when Adapter::OPEN_AS_FILE
-        path = params[:path]
+        path = params[:path] || params['path']
 
-        options = params[:options]
+        options = params[:options] || params['options']
         klass.new(path, options)
       when Adapter::OPEN_AS_SOCK
-        host = params[:host]
-        port = params[:port]
+        host = params[:host] || params['host']
+        port = params[:port] || params['port']
 
-        options = params[:options]
+        options = params[:options] || params['options']
         klass.new(host, port, options)
       when Adapter::OPEN_AS_HTTP
-        url = params[:url]
+        url = params[:url] || params['url']
 
         klass.new(url)
       end
