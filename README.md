@@ -1,6 +1,11 @@
 # mruby-neco
 NoSQL elastic command organizer :cat:
 
+# synopsis
+
+neco privides a unified interfaces to NoSQL drivers.
+The I/F contains `get`, `put`, `delete`, and `each`.
+
 # example
 
 ```ruby
