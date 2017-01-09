@@ -8,7 +8,7 @@ module Neco
       end
 
       def initialize(path, options)
-        @db = K2Hash.new path, options[:mode], options[:flags]
+        @db = K2Hash.new(path, options[:mode], options[:flags])
       end
 
       def get(key)

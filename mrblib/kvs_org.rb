@@ -97,6 +97,8 @@ module Neco
       case target
       when 'etcd', 'Etcd'
         :etcd
+      when 'k2hash', 'K2Hash', 'K2HASH'
+        :k2hash
       when 'lmdb', 'Lmdb', 'LMDB'
         :lmdb
       when 'redis', 'Redis'
@@ -108,6 +110,8 @@ module Neco
       case dbsym
       when :etcd
         klass = Adapter::EtcdKvs
+      when :k2hash
+        klass = Adapter::K2HashKvs
       when :lmdb
         klass = Adapter::LmdbKvs
       when :redis
